@@ -1,0 +1,8 @@
+{% extends 'default/base.html.twig' %}
+{% set service = collections.service %}
+{% block body_content %}
+    <details open>
+        <summary><i class="bi bi-link"></i> Links</summary>
+        {% include 'global/links.html.twig' with {'links' : collections.links } %}
+    </details>
+{% endblock %}

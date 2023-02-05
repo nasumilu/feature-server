@@ -1,0 +1,18 @@
+<ul class="list-group">
+    {% for link in links %}
+        <li class="list-group-item d-flex justify-content-between align-items-end">
+            <div class="ms-2 me-auto">
+                <a class="text-decoration-none" href="{{ link.href }}" rel="{{ link.rel }}" type="{{ link.type }}"
+                   title="{{ (link.title ?: '')|capitalize | trim }}">
+                    {{ link.href }}
+                </a>
+            </div>
+            <span class="badge rounded-pill text-bg-primary">{{ link.rel }}</span> &nbsp;
+            <span class="badge rounded-pill text-bg-secondary">{{ link.type }}</span>&nbsp;
+            {% if link.title is defined and link.title is not null %}
+                <span class="badge rounded-pill text-bg-info">{{ link.title }}</span>&nbsp;
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+

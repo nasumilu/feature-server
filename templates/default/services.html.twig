@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Feature Service(s)</h1>
+    {% for service in services.services %}
+        <details open>
+            <summary><i class="bi bi-globe-americas"></i> {{ service.title ?: service.name }}</summary>
+            <div class="text-muted">{{ service.description }}</div>
+            <details class="p-3">
+                <summary><i class="bi bi-link"></i> Link(s)</summary>
+                {% include 'global/links.html.twig' with {'links' : service.links } %}
+            </details>
+        </details>
+    {% endfor %}
+{% endblock %}

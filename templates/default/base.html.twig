@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Feature Service</h1>
+    <h2>{{ service.title ?: service.name }}</h2>
+    {% if service.description is defined and service.description is not null%}
+        <div class="text-muted">{{ service.description }}</div>
+    {% endif %}
+    {% block  body_content %}{% endblock %}
+{% endblock %}

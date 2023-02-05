@@ -1,0 +1,27 @@
+<address>
+    {% if contact.address1 is defined and contact.address1 is not null %}
+        {{ contact.address1 ~ ' ' }}
+    {% endif %}
+
+    {% if contact.address2 is defined and contact.address2 is not null %}
+        {{ contact.address2 ~ ' ' }}
+        <br>
+    {% endif %}
+
+    {% if contact.city is defined and contact.city is not null %}
+        {{ contact.city }}
+        {% if contact.region is defined and contact.region is not null %}
+            {{ ', ' ~ contact.region ~ ' ' }}
+            {% if contact.postal_code is defined and contact.postal_code is not null %}
+                {{ ' ' ~ contact.postal_code ~ ' ' }}
+            {% endif %}
+            <br>
+        {% endif %}
+    {% endif %}
+
+    {% if contact.email is defined and contact.email is not null %}
+        <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+        <br>
+    {% endif %}
+
+</address>
