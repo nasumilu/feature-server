@@ -30,7 +30,8 @@ $ symfony server:start
 ```
 
 ### Resources
-[Feature Server Documenation](/docs/index.md)
-[OGC API - Features - Part 1: Core corrigendum](https://docs.opengeospatial.org/is/17-069r4/17-069r4.html)
-[Symfony](https://symfony.com/)
-[Doctrine DBAL](https://www.doctrine-project.org/projects/dbal.html)
+- [Feature Server Documentation](/docs/index.md)
+- [nasumilu/spatial-platform](https://github.com/nasumilu/spatial-platform)
+- [OGC API - Features - Part 1: Core corrigendum](https://docs.opengeospatial.org/is/17-069r4/17-069r4.html)
+- [Symfony](https://symfony.com/)
+- [Doctrine DBAL](https://www.doctrine-project.org/projects/dbal.html)
