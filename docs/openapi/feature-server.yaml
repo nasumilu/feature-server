@@ -1,0 +1,15 @@
+openapi: 3.0.3
+info:
+  title: Feature Server
+  description: A simple feature server administration API.
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /api/drivers:
+    $ref: './paths/drivers.yaml'
+
+  /api/datasources:
+    $ref: './paths/datasources.yaml'
+
+  

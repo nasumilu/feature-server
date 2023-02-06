@@ -1,0 +1,31 @@
+type: object
+required:
+  - id
+  - name
+  - dbname
+  - driver
+  - host
+  - port
+  - username
+  - links
+properties:
+  id:
+    type: number
+    format: int32
+  name:
+    type: string
+  dbname:
+    type: string
+  driver:
+    type: string
+  host:
+    type: string
+  port:
+    type: number
+    format: int32
+  username:
+    type: string
+  password:
+    type: string
+  links:
+    $ref: './link.yaml'

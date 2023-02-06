@@ -1,0 +1,13 @@
+type: object
+required:
+  - label
+  - driver
+properties:
+  label:
+    type: string
+  driver:
+    type: string
+example:
+  label: MySQL
+  driver: pdo_mysql
+  
