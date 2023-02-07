@@ -36,7 +36,7 @@ class DatasourceController extends AbstractController
         };
     }
 
-    #[Route('/item/{id<\d+>}.{_format}', name: 'datasource-item', methods: 'get')]
+    #[Route('/{id<\d+>}.{_format}', name: 'datasource-item', methods: 'get')]
     public function item(Request $request, int $id): Response
     {
         if(null === $datasource = $this->repository->find($id)) {

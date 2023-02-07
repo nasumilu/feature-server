@@ -43,4 +43,16 @@ abstract class Assert
         BaseAssert::assertNotNull($link['rel']);
     }
 
+    public static function assertIsError($error): void {
+        BaseAssert::assertIsArray($error);
+        BaseAssert::assertArrayHasKey('type', $error);
+        BaseAssert::assertNotNull($error['type']);
+        BaseAssert::assertArrayHasKey('title', $error);
+        BaseAssert::assertNotNull($error['title']);
+        BaseAssert::assertArrayHasKey('status', $error);
+        BaseAssert::assertNotNull($error['status']);
+        BaseAssert::assertArrayHasKey('detail', $error);
+        BaseAssert::assertNotNull($error['detail']);
+    }
+
 }

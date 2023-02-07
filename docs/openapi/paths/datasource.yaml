@@ -1,0 +1,17 @@
+get:
+  description: Returns the dataource by it unique id
+  operationId: datasource
+  responses:
+    '200':
+      description: A datasource
+      content:
+        application/json:
+          schema:
+            $ref: '../schema/datasource.yaml'
+parameters:
+- name: id
+  in: path
+  required: true
+  schema:
+    type: number
+    format: int32

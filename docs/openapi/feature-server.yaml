@@ -12,4 +12,6 @@ paths:
   /api/datasources:
     $ref: './paths/datasources.yaml'
 
-  
+  /api/datasources/{id}:
+    $ref: './paths/datasource.yaml'
+

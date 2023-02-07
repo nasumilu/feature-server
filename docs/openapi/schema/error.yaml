@@ -1,0 +1,22 @@
+type: object
+required:
+  - type
+  - title
+  - status
+  - detail
+properties:
+  type:
+    type: string
+  title:
+    type: string
+  status:
+    type: number
+    format: int32
+  detail:
+    type: string
+example:
+  type: 'https://tools.ietf.org/html/rfc2616#section-10'
+  title: An error occurred
+  status: 404
+  detail: Not Found
+  

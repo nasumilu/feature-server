@@ -56,7 +56,7 @@ class DatasourceTest extends TestCase
      * @param array $datasources
      * @return void
      */
-    public function testDatasourceResponseSchema(array $datasources): void {
+    public function testDatasourcesResponseSchema(array $datasources): void {
         $this->assertArrayHasKey('datasources', $datasources);
         $this->assertArrayHasKey('links', $datasources);
         foreach($datasources['datasources'] as $datasource) {
@@ -68,8 +68,43 @@ class DatasourceTest extends TestCase
         foreach($datasources['links'] as $link) {
             Assert::assertIsLink($link);
         }
-
     }
 
+    /**
+     * @throws TransportExceptionInterface
+     * @throws ServerExceptionInterface
+     * @throws RedirectionExceptionInterface
+     * @throws DecodingExceptionInterface
+     * @throws ClientExceptionInterface
+     */
+    public function testDatasourceResponseSchema(): void {
+        $client = HttpClient::createForBaseUri($_ENV['API_URL']);
+        $response = $client->request('GET', '/api/datasources/2');
+        $this->assertEquals(200, $response->getStatusCode());
+        Assert::assertIsDatasource($response->toArray());
+    }
+
+    /**
+     * @throws TransportExceptionInterface
+     * @throws ServerExceptionInterface
+     * @throws RedirectionExceptionInterface
+     * @throws DecodingExceptionInterface
+     * @throws ClientExceptionInterface
+     */
+    public function testDatasourceNotFoundResponse(): array {
+        $client = HttpClient::createForBaseUri($_ENV['API_URL']);
+        $response = $client->request('GET', '/api/datasources/200');
+        $this->assertEquals(404, $response->getStatusCode());
+        return $response->toArray(false);
+    }
+
+    /**
+     * @depends testDatasourceNotFoundResponse
+     * @param array $error
+     * @return void
+     */
+    public function testDatasourceNotFoundResponseSchema(array $error): void {
+        Assert::assertIsError($error);
+    }
 
 }
