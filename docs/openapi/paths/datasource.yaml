@@ -1,5 +1,5 @@
 get:
-  description: Returns the dataource by it unique id
+  summary: Returns the dataource by it unique id
   operationId: datasource
   responses:
     '200':
@@ -7,7 +7,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../schema/datasource.yaml'
+            $ref: '../schemas/datasource.yaml'
 parameters:
 - name: id
   in: path

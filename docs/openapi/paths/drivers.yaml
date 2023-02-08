@@ -1,5 +1,5 @@
 get:
-  description: Returns a list of supported datasource drivers
+  summary: Returns a list of supported datasource drivers
   operationId: drivers
   responses:
     200:
@@ -9,4 +9,4 @@ get:
           schema:
             type: array
             items:
-              $ref: '../schema/driver.yaml'
+              $ref: '../schemas/driver.yaml'

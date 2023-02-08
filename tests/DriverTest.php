@@ -39,7 +39,7 @@ class DriverTest extends TestCase
 
     /**
      * Test driver requirement:
-     *  - 2.2.B) The response SHALL be an array of objects based upon the OpenAPI 3.0 schema, driver.yaml.
+     *  - 2.2.B) The response SHALL be an array of objects based upon the OpenAPI 3.0 schemas, driver.yaml.
      *
      * @link https://raw.githubusercontent.com/nasumilu/feature-server/main/docs/openapi/schema/driver.yaml driver.yaml
      * @depends testDriverSupportsGetRequest

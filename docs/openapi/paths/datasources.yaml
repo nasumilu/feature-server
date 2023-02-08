@@ -1,5 +1,5 @@
 get:
-  description: Returns the list of configured datasources
+  summary: Returns the list of configured datasources
   operationId: datasources
   responses:
     200:
@@ -15,7 +15,8 @@ get:
               datasources:
                 type: array
                 items:
-                  $ref: '../schema/datasource.yaml'
+                  $ref: '../schemas/datasource.yaml'
               links:
                 type: array
-                $ref: '../schema/link.yaml'
+                items:
+                  $ref: '../schemas/link.yaml'

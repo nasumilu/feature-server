@@ -1,0 +1,25 @@
+type: object
+required:
+  - name
+  - dbname
+  - driver
+  - host
+  - port
+  - username
+  - password
+properties:
+  name:
+    type: string
+  dbname:
+    type: string
+  driver:
+    type: string
+  host:
+    type: string
+  port:
+    type: number
+    format: int32
+  username:
+    type: string
+  password:
+    type: string

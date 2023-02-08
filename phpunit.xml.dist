@@ -13,5 +13,6 @@
     </testsuites>
     <php>
         <env name="API_URL" value="https://localhost:8000"/>
+        <env name="TEST_CONNECTION" value="connection configuration here"/>
     </php>
 </phpunit>

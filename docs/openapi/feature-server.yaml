@@ -3,15 +3,24 @@ info:
   title: Feature Server
   description: A simple feature server administration API.
   version: 1.0.0
+  license:
+    name: Apache 2.0
+  contact:
+    name: Michael Lucas
+    url: https://github.com/nasumilu/feature-server
+    email: nasumilu@gmail.com
 servers:
-  - url: 'https'
+  - url: 'https://localhost:8000'
+    description: Local development server
+  - url: 'https://nasumilu.io/gis'
+    description: Production Server
 paths:
   /api/drivers:
     $ref: './paths/drivers.yaml'
-
   /api/datasources:
     $ref: './paths/datasources.yaml'
-
   /api/datasources/{id}:
     $ref: './paths/datasource.yaml'
+  /api/dataources/test-connection:
+    $ref: './paths/test-connection.yaml'
 

@@ -1,0 +1,13 @@
+type: object
+required:
+  - success
+  - message
+properties:
+  success:
+    type: boolean
+  message:
+    type: string
+example:
+  success: true
+  message: -|
+    'Succeeded: id:5;name:Issue Trac - MySQL;comment:A mysql test connection;dbname:issue_trac;port:3306;username:dbmaster;host:192.168.122.11;driver:pdo_mysql;'

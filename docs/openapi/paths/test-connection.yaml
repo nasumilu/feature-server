@@ -1,0 +1,19 @@
+post:
+  summary: Test a datasource configuration to ensure that it is accessible by the server
+  operationId: test-connection
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: '../parameters/datasource-configuration.yaml'
+  responses:
+    200:
+      description: -|
+        Indicates that an attempt was made to connect to the server.
+        
+        The response property `success` shall indicate whether the server successfully connected to the datasource
+      content:
+        application/json:
+          $ref: '../schemas/test-connection.yaml'
+

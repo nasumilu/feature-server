@@ -24,6 +24,7 @@ class DatasourceController extends AbstractController
     }
 
     /**
+     * List the configured datasources
      * @throws Exception
      */
     #[Route('.{_format}', name: 'datasource-list', methods: 'get')]
@@ -36,6 +37,15 @@ class DatasourceController extends AbstractController
         };
     }
 
+    /**
+     * Get a specific datasource by its unique identifier
+     * @param Request $request
+     * @param int $id
+     * @return Response
+     * @throws Exception
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
+     */
     #[Route('/{id<\d+>}.{_format}', name: 'datasource-item', methods: 'get')]
     public function item(Request $request, int $id): Response
     {
@@ -54,7 +64,7 @@ class DatasourceController extends AbstractController
      * @param SerializerInterface $serializer
      * @return Response
      */
-    #[Route('/test-connection.{_format}', name: 'datasource-test-connection', methods: ['options', 'post'])]
+    #[Route('/test-connection.{_format}', name: 'datasource-test-connection', methods: 'post')]
     public function test(Request $request, SerializerInterface $serializer): Response
     {
         $data = ['success' => false, 'message' => ''];
