@@ -14,6 +14,9 @@ The requirements for the OGC API Feature are found in the [OGC API - Features - 
 
 ## Server API
 
+Request/Response schema use the OpenAPI 3.0 specification.
+
+
 ### Drivers
 
 Drivers represent a vendor specific the database, accessed via an abstract layer interface. The availability of drivers depends on the extension install. 
