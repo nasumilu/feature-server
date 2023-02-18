@@ -16,8 +16,7 @@ The requirements for the OGC API Feature are found in the [OGC API - Features - 
 
 ### Drivers
 
-Drivers represent an implementation of vendor specific implementation of the database abstract layer interface. The 
-availability of drivers depends on the extension install. 
+Drivers represent a vendor specific the database, accessed via an abstract layer interface. The availability of drivers depends on the extension install. 
 
 | Requirement(s) | Description                                                                                                  | Status |
 |----------------|--------------------------------------------------------------------------------------------------------------|--------|
