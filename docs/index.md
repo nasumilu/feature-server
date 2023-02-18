@@ -14,7 +14,7 @@ The requirements for the OGC API Feature are found in the [OGC API - Features - 
 
 ## Server API
 
-Request/Response schema use the OpenAPI 3.0 specification.
+Request/Response schema use the [OpenAPI 3.0 specification](https://www.openapis.org/).
 
 
 ### Drivers
